@@ -1,0 +1,17 @@
+{% extends 'portf/base.html' %}
+{% block header %}
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Привет</h1>
+      <p class="lead">Это страница с блогами</p>
+      <p class="lead">всего блогов {{ blogs.count }}</p>
+    </div>
+
+{% for blog in blogs %}
+<h1><a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a></h1>
+<h5>{{ blog.desc|truncatechars:25 }}</h5>
+<p>{{ blog.pub_time }}</p>
+{% endfor %}
+
+{% endblock %}
+

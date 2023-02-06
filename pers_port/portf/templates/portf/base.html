@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Сайт</title>
+    <link rel="icon" type="image/png" href="{% static 'portf/THLOGOFORFAVICON.png' %}">
+    <link rel="stylesheet" href="{% static 'portf/style.css' %}">
+</head>
+<body>
+{% load static %}
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="http://localhost:8000">Главная</a>
+        <a class="p-2 text-dark" href="{% url 'blog:all_blogs' %}">Блоги</a>
+        <a class="p-2 text-dark" href="/admin">Админ</a>
+        <a class="p-2 text-dark" href="#">Твитер</a>
+        <a class="p-2 text-dark" href="#">Вк</a>
+        <a class="p-2 text-dark" href="{% static 'portf/Безопасность в сети – Telegraph.pdf' %}">Безопасность в интернете</a>
+
+      </nav>
+    </div>
+
+{% block header %}{% endblock %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+</body>
+</html>
